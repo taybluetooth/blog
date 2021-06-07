@@ -1,0 +1,22 @@
+.navbar {
+    @apply flex;
+    flex: 0 0 10% !important;
+    @apply align-middle;
+    @apply bg-black;
+    @apply text-white;
+    @apply p-10;
+}
+
+.navbar-content {
+    @apply flex;
+    @apply flex-row;
+    @apply w-full;
+    @apply p-5;
+    @apply justify-center;
+    @apply mx-auto;
+}
+
+.navbar-content > a {
+    @apply flex-1;
+}
+

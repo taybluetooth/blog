@@ -1,0 +1,31 @@
+.slug-page {
+    @apply flex;
+    @apply flex-col;
+    @apply h-screen;
+}
+
+.slug-page > div {
+    @apply flex;
+    @apply justify-center;
+    @apply flex-col;
+    @apply text-center;
+    @apply p-6;
+}
+
+.slug-header-section,
+.slug-footer-section {
+    @apply bg-blue-500;
+    @apply text-white; 
+}
+
+.slug-header-section {
+    flex: 1 1 30%;
+}
+
+.slug-post-section {
+    flex: 1 1 60%;
+}
+
+.slug-footer-section {
+    flex: 1 1 10%;
+}
