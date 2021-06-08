@@ -12,19 +12,31 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
-    "Slug": {
+    "slug": {
       "type": "string"
     },
-    "Content": {
+    "content": {
       "type": "richtext"
     },
-    "User": {
+    "user": {
       "plugin": "users-permissions",
       "model": "user",
       "via": "posts"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }

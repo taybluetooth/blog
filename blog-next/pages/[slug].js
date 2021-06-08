@@ -1,6 +1,8 @@
 import Link from 'next/link'
+import Markdown from 'markdown-to-jsx';
 
 export default function Post({ post }) {
+    
     return (
         <div className='slug-page'>
             <div className="navbar">
@@ -12,16 +14,24 @@ export default function Post({ post }) {
                 </div>
             </div>
             <div className='slug-header-section'>
-                <img className="w-20 justify-center mx-auto" src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0b/Darth_Vader_in_The_Empire_Strikes_Back.jpg/220px-Darth_Vader_in_The_Empire_Strikes_Back.jpg"></img>
-                <h1>{post.Title}</h1>
-                <h1>{post.User.username} - {post.User.created_at.substring(0,10)} - {post.User.email}</h1>
+                <div className='image-square'>
+                    {/*change url when in production!*/} 
+                    <img src={`http://localhost:1337` + post.image.url}></img>
+                </div>
+                <h2>{post.title}</h2>
+                <h2>{post.user.username} - {post.user.created_at.substring(0,10)}</h2>
             </div>
             <div className='slug-post-section'>
-                <h1>{post.Content}</h1>
+                <div className='slug-post-section-content'>
+                    <div className='author-image-rounded'>
+                        <img src={`http://localhost:1337` + post.user.profilePic.url}></img>
+                    </div>
+                    <Markdown options={{ forceBlock: true }}>{post.content}</Markdown>
+                </div>
             </div>
             <div className='slug-footer-section'>
-                <h1>SOCIAL MEDIA LINKS</h1>
-                <h1>CONTACT DETAILS</h1>
+                <p>SOCIAL MEDIA LINKS</p>
+                <p>CONTACT DETAILS</p>
             </div>
         </div>
     )
@@ -32,7 +42,7 @@ export async function getStaticPaths() {
     const data = await res.json()
 
     const paths = data.map((post) => ( {
-        params: { slug: post.Slug },
+        params: { slug: post.slug },
     }))
 
     return {
@@ -43,7 +53,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
     const { slug } = params;
-    const res = await fetch(`http://localhost:1337/posts?Slug=${slug}`)
+    const res = await fetch(`http://localhost:1337/posts?slug=${slug}`)
     const data = await res.json()
     const post = data[0]
 

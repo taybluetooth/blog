@@ -1,0 +1,33 @@
+.image-square,
+.author-image-rounded {
+    @apply block;
+    @apply overflow-hidden;
+    @apply h-60;
+    @apply w-60;
+    @apply p-5;
+}
+
+.image-square {
+    @apply mx-auto;
+}
+
+.author-image-rounded {
+    @apply mr-auto;
+    @apply float-right;
+}
+
+.image-square img,
+.author-image-rounded img {
+    @apply block;
+    @apply min-h-full;
+    @apply min-w-full;
+    object-fit: cover;
+}
+
+.image-square img {
+    @apply rounded-md;
+}
+
+.author-image-rounded img {
+    @apply rounded-full;
+}

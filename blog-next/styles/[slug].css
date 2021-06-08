@@ -14,18 +14,29 @@
 
 .slug-header-section,
 .slug-footer-section {
-    @apply bg-blue-500;
+    @apply flex-grow;
     @apply text-white; 
 }
 
 .slug-header-section {
-    flex: 1 1 30%;
+    flex: 2 0 40%;
+    @apply bg-pink-800;
+    @apply p-10;
 }
 
 .slug-post-section {
-    flex: 1 1 60%;
+    flex: 1 1 50%;
 }
 
 .slug-footer-section {
-    flex: 1 1 10%;
+    flex: 1 0 20%;
+    @apply bg-gray-400;
+}
+
+.slug-post-section-content {
+    @apply w-full;
+    @apply md:w-2/5;
+    @apply mx-auto;
+    @apply text-left;
+    @apply p-5;
 }

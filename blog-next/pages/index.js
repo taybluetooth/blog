@@ -9,10 +9,10 @@ export default function Home({ posts }) {
       {/* loop over posts and display them */}
       {posts && 
         posts.map((post) => (
-          <Link href={`/${post.Slug}`} key={post.id}>
+          <Link href={`/${post.slug}`} key={post.id}>
             <a>
-              <h2>{post.Title}</h2>
-              <div>{post.User.username}</div>
+              <h2>{post.title}</h2>
+              <div>{post.user.username}</div>
             </a>
           </Link>
       ))}

@@ -59,8 +59,20 @@
       "plugin": "users-permissions",
       "configurable": false
     },
+    "profilePic": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
     "posts": {
-      "via": "User",
+      "via": "user",
       "collection": "post"
     }
   }
