@@ -4,7 +4,7 @@
     @apply h-screen;
 }
 
-.slug-page > div {
+.slug-page > div:not(:first-child) {
     @apply flex;
     @apply justify-center;
     @apply flex-col;
@@ -15,12 +15,12 @@
 .slug-header-section,
 .slug-footer-section {
     @apply flex-grow;
-    @apply text-white; 
+    @apply text-black; 
 }
 
 .slug-header-section {
     flex: 2 0 40%;
-    @apply bg-pink-800;
+    @apply bg-yellow-400;
     @apply p-10;
 }
 

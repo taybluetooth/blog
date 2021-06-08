@@ -2,20 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 * {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'DM Sans', sans-serif;
 }
 
 h1 {
-    font-size: x-large;
+    @apply text-2xl;
 }
 
 h2 {
-    font-size: large;
+    @apply text-xl;
 }
 
 p {
-    font-size: medium;
+    @apply text-base;
+}
+
+a {
+    @apply text-lg;
 }
