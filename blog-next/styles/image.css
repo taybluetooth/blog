@@ -1,5 +1,6 @@
+
 .image-square,
-.author-image-rounded {
+.image-feature {
     @apply block;
     @apply overflow-hidden;
     @apply h-60;
@@ -7,27 +8,31 @@
     @apply p-5;
 }
 
+.small {
+    @apply h-20;
+    @apply w-20;
+}
+
+.image-feature {
+    @apply h-80;
+    @apply w-80;
+    @apply mx-auto;
+}
+
 .image-square {
     @apply mx-auto;
 }
 
-.author-image-rounded {
-    @apply mr-auto;
-    @apply float-right;
-}
 
 .image-square img,
-.author-image-rounded img {
+.image-feature img {
     @apply block;
     @apply min-h-full;
     @apply min-w-full;
     object-fit: cover;
 }
 
-.image-square img {
+.image-square img,
+.image-feature img {
     @apply rounded-md;
-}
-
-.author-image-rounded img {
-    @apply rounded-full;
 }

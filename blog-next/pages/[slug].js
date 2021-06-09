@@ -7,25 +7,61 @@ export default function Post({ post }) {
         <div className='slug-page'>
             <Navbar />
             <div className='slug-header-section'>
-                <div className='image-square'>
-                    {/*change url when in production!*/} 
-                    <img src={`http://localhost:1337` + post.image.url}></img>
+                <div className='slug-header-section-content'>
+                    <div className='slug-header-section-content-left'>
+                        <h1>{post.title}</h1>
+                        <h3>By <b>{post.user.username}</b> on {new Date(post.user.created_at.substring(0,10)).toDateString()}</h3>
+                    </div>
+                    <div className='slug-header-section-content-right'>
+                        <div className='image-square'>
+                            {/*change url when in production!*/} 
+                            <img src={`http://localhost:1337` + post.headerImage.url}></img>
+                        </div>
+                    </div>
                 </div>
-                <h1>{post.title}</h1>
-                <h2>{post.user.username} - {post.user.created_at.substring(0,10)}</h2>
             </div>
             <div className='slug-post-section'>
                 <div className='slug-post-section-content'>
-                    <div className='author-image-rounded'>
-                        <img src={`http://localhost:1337` + post.user.profilePic.url}></img>
-                    </div>
                     <Markdown options={{ forceBlock: true }}>{post.content}</Markdown>
+                    {post.featureImage ?
+                        <div className='image-feature'>
+                            <img src={`http://localhost:1337` + post.featureImage.url}></img>
+                        </div>
+                        :
+                        <div></div>
+                    }
+                </div>
+            </div>
+            <div className='slug-author-section'>
+                <div className='slug-author-section-content'>
+                    <div className='slug-author-section-content-left'>
+                        <h1>About The Author</h1>
+                        <h3>
+                            Hey I am <span>Callum</span>, a Software Engineer, Language Enthusiast and Full-Time Nerd.
+                            This is my new blog based around fullstack development tutorials involving JavaScript and other bits and pieces.
+                        </h3>
+                        <button>See my GitHub x</button>
+                    </div>
+                    <div className='slug-author-section-content-right'>
+                        <div className='image-square'>
+                            <img src={`http://localhost:1337` + post.user.profilePic.url}></img>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className='slug-footer-section'>
                 <p>Developed by Callum Taylor (2021)</p>
-                <p>Powered by React and Next.js</p>
-                <p>Content managed by Strapi</p>
+                <div className='slug-footer-section-content'>
+                    <div className='image-square small'>
+                        <img src='Octocat.png'></img>
+                    </div>
+                    <div className='image-square small'>
+                        <img src='react.png'></img>
+                    </div>
+                    <div className='image-square small'>
+                        <img src='next-js.svg'></img>
+                    </div>
+                </div>
             </div>
         </div>
     )

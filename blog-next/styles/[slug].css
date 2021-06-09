@@ -18,10 +18,76 @@
     @apply text-black; 
 }
 
+.slug-author-section {
+    @apply bg-gray-700;
+    @apply text-gray-100;
+}
+
 .slug-header-section {
     flex: 2 0 40%;
     @apply bg-yellow-400;
     @apply p-10;
+}
+
+.slug-header-section-content,
+.slug-author-section-content {
+    @apply w-2/5;
+    @apply flex;
+    @apply flex-row;
+    @apply mx-auto;
+}
+
+.slug-footer-section-content {
+    @apply w-1/5;
+    @apply flex;
+    @apply flex-row;
+    @apply mx-auto;
+}
+
+.slug-header-section-content-left,
+.slug-header-section-content-right,
+.slug-author-section-content-left,
+.slug-author-section-content-right {
+    @apply flex;
+}
+
+.slug-header-section-content-left,
+.slug-author-section-content-left {
+    @apply flex-col;
+    @apply w-4/5;
+    @apply mx-auto;
+    @apply text-left;
+    @apply justify-center;
+}
+
+.slug-author-section-content {
+    @apply w-3/5;
+}
+
+.slug-author-section-content-left {
+    @apply w-2/5;
+}
+
+.slug-author-section-content-left > h1,
+.slug-author-section-content-left > h3 {
+    @apply py-3;
+}
+
+.slug-author-section-content-left > h3 > span {
+    text-decoration: underline;
+    text-decoration-color: rgb(245,158,11);
+    text-underline-offset: 4px; /* WARNING NOT COMPATIBLE WITH IE11!*/
+}
+
+.slug-author-section-content-left button {
+    @apply bg-yellow-500;
+    @apply w-2/5;
+    @apply p-2;
+    @apply rounded-sm;
+}
+
+.slug-header-section-content-left h3 {
+    @apply pt-3;
 }
 
 .slug-post-section {
@@ -40,3 +106,4 @@
     @apply text-left;
     @apply p-5;
 }
+

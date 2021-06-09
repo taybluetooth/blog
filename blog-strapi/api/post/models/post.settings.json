@@ -26,7 +26,19 @@
       "model": "user",
       "via": "posts"
     },
-    "image": {
+    "headerImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "featureImage": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
