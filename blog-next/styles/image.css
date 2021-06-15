@@ -36,3 +36,12 @@
 .image-feature img {
     @apply rounded-md;
 }
+
+@media (max-width: 1024px) {
+    .image-square {
+        @apply h-40 w-40;
+    }
+    .small {
+        @apply h-20 w-20;
+    }
+}

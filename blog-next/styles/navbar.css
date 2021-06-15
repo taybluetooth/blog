@@ -58,3 +58,6 @@
     @apply h-12;
 }
 
+.navbar a:hover {
+    @apply text-gray-700;
+}

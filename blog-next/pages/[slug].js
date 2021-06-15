@@ -43,7 +43,7 @@ export default function Post({ post }) {
                         <button>See my GitHub x</button>
                     </div>
                     <div className='slug-author-section-content-right'>
-                        <div className='image-square'>
+                        <div className='slug-author-section-content-right-img image-square'>
                             <img src={`http://localhost:1337` + post.user.profilePic.url}></img>
                         </div>
                     </div>
