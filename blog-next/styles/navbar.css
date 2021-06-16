@@ -23,34 +23,42 @@
 .navbar-content {
     @apply flex;
     @apply mx-auto;
+    @apply md:w-3/5;
+    @apply w-full;
+}
+
+
+.navbar-content-right {
+    @apply hidden;
+    @apply md:flex;
+    @apply md:flex-row;
+    @apply ml-auto;
     @apply w-3/5;
 }
 
-.navbar-content-right,
 .navbar-content-left {
     @apply flex;
-}
-
-.navbar-content-right {
     @apply flex-row;
-    @apply ml-auto;
-    @apply w-2/5;
-}
-
-.navbar-content-left {
-    @apply justify-center;
-    @apply w-2/5;
+    @apply md:justify-center;
+    @apply w-full;
+    @apply md:w-2/5;
 }
 
 .navbar-content-left a {
-    line-height: 2.5rem;
+    @apply self-center;
     @apply px-3;
 }
 
-.navbar-content-right > a {
-    line-height: 2.5rem;
-    width: 25%;
+.navbar-content-right a {
+    @apply self-center;
+    @apply w-1/4;
 }
+
+.navbar-toggle {
+    @apply md:invisible;
+    @apply flex;
+}
+
 
 .icon {
     @apply inline-block;

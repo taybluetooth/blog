@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import Link from 'next/link'
+import Hamburger from 'hamburger-react'
 
 const Navbar = () => {
 
@@ -29,6 +30,9 @@ const Navbar = () => {
                     <a>About</a>
                     <a>Projects</a>
                     <a>Contact</a>
+                </div>
+                <div className="navbar-toggle">
+                    <Hamburger/>
                 </div>
             </div>
         </div>
