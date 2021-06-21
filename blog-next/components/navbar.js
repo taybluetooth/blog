@@ -5,6 +5,7 @@ import Hamburger from 'hamburger-react'
 const Navbar = () => {
 
     const [color, setColor] = useState(false);
+    const [isOpen, setOpen] = useState(false);
 
     const changeNavbarColor = () => {
         if(window.scrollY >= 400) {
@@ -32,7 +33,15 @@ const Navbar = () => {
                     <a>Contact</a>
                 </div>
                 <div className="navbar-toggle">
-                    <Hamburger/>
+                    <Hamburger toggled={isOpen} toggle={setOpen}/>
+                </div>
+            </div>
+            <div className={isOpen ? 'navbar-dropdown-responsive' : 'navbar-dropdown'}>
+                <div className='navbar-dropdown-content'>
+                    <Link className='navbar-dropdown-link' href='/'>Home</Link>
+                    <Link className='navbar-dropdown-link' href='/'>About</Link>
+                    <Link className='navbar-dropdown-link' href='/'>Projects</Link>
+                    <Link className='navbar-dropdown-link' href='/'>Contact</Link>
                 </div>
             </div>
         </div>

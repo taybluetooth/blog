@@ -69,3 +69,25 @@
 .navbar a:hover {
     @apply text-gray-700;
 }
+
+.navbar-dropdown {
+    @apply hidden;
+}
+
+@media (max-width: 768px) {
+    .navbar-dropdown-responsive {
+        @apply flex;
+        @apply w-full;
+        @apply h-1/5;
+    }
+    .navbar-dropdown-content {
+        @apply flex;
+        @apply flex-col;
+        @apply p-1;
+        @apply py-6;
+    }
+    .navbar-dropdown-content > a {
+        @apply py-2;
+    }
+    
+}
