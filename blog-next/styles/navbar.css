@@ -22,6 +22,7 @@
 
 .navbar-content {
     @apply flex;
+    @apply items-center;
     @apply mx-auto;
     @apply md:w-3/5;
     @apply w-full;
@@ -75,10 +76,13 @@
 }
 
 @media (max-width: 768px) {
+    .navbar-content {
+        @apply items-start;
+    }
     .navbar-dropdown-responsive {
         @apply flex;
         @apply w-full;
-        @apply h-1/5;
+        @apply h-4/5;
     }
     .navbar-dropdown-content {
         @apply flex;

@@ -1,0 +1,49 @@
+.home-page {
+    @apply flex;
+    @apply flex-col;
+    @apply h-screen;
+}
+
+.home-content-header {
+    @apply flex;
+    @apply flex-col;
+    @apply items-center;
+    @apply p-16;
+    @apply bg-gray-100;
+}
+
+.header-text {
+    @apply text-gray-700;
+    @apply text-left !important;
+}
+
+.home-content-posts {
+    @apply flex;
+    @apply flex-col;
+    @apply w-full;
+    @apply items-center;
+    @apply p-8;
+}
+
+.post {
+    @apply flex;
+    @apply flex-row;
+    @apply w-full;
+    @apply items-baseline;
+}
+
+.post:hover {
+    @apply bg-opacity-50;
+    @apply bg-gray-100;
+}
+
+.post > p {
+    flex: 0 0 100px;
+    font-size: 1rem;
+    @apply text-gray-500;
+}
+
+.post > h2 {
+    flex: 1 1;
+    @apply text-gray-700;
+}
