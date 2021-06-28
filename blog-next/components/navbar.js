@@ -24,7 +24,7 @@ const Navbar = () => {
             <div className='navbar-content'>
                 <div className='navbar-content-left'>
                     <img className='icon' src='computer-icon.png'></img>
-                    <Link href='/'>Callum Taylor</Link>
+                    <Link href='/'><strong>Callum Taylor</strong></Link>
                 </div>
                 <div className='navbar-content-right'>
                     <Link href='/'>Home</Link>

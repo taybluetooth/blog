@@ -3,20 +3,20 @@
     @apply flex-row;
     @apply flex-wrap;
     @apply align-middle;
-    @apply text-black;
-    @apply bg-yellow-400;
+    color: #424242;
+    background-color: #FEFEFA;
     @apply p-6;
     @apply sticky;
     @apply top-0;
     @apply w-full;
     @apply border-b;
-    @apply border-black;
+    @apply border-gray-500;
     transition: background-color 0.2s ease;
 }
 
 .colorChange { 
-    @apply bg-white;
-    @apply text-gray-500;
+    background-color: #424242;
+    @apply text-gray-300;
     transition: background-color 0.2s ease;
 }
 
@@ -27,7 +27,6 @@
     @apply md:w-3/5;
     @apply w-full;
 }
-
 
 .navbar-content-right {
     @apply hidden;
@@ -45,7 +44,7 @@
     @apply md:w-2/5;
 }
 
-.navbar-content-left a {
+.navbar-content-left strong {
     @apply self-center;
     @apply px-3;
 }
@@ -68,7 +67,7 @@
 }
 
 .navbar a:hover {
-    @apply text-gray-700;
+    color: #A3A3A3;
 }
 
 .navbar-dropdown {

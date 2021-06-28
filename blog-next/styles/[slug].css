@@ -15,17 +15,17 @@
 .slug-header-section,
 .slug-footer-section {
     @apply flex-grow;
-    @apply text-black; 
+    color: #424242; 
 }
 
 .slug-author-section {
-    @apply bg-gray-700;
-    @apply text-gray-100;
+    background-color: #424242;
+    color: #FEFEFA;
 }
 
 .slug-header-section {
     flex: 2 0 40%;
-    @apply bg-yellow-400;
+    background-color: #FCFC62;
     @apply p-10;
 }
 
@@ -36,6 +36,11 @@
     @apply flex;
     @apply flex-row;
     @apply mx-auto;
+}
+
+.slug-post-section {
+    background-color: #FEFEFA;
+    color: #424242;
 }
 
 .slug-footer-section-content {
@@ -80,12 +85,13 @@
 
 .slug-author-section-content-left > h3 > span {
     text-decoration: underline;
-    text-decoration-color: rgb(245,158,11);
+    text-decoration-color: #FCFC62;
     text-underline-offset: 4px; /* WARNING NOT COMPATIBLE WITH IE11!*/
 }
 
 .slug-author-section-content-left button {
-    @apply bg-yellow-500;
+    background-color: #FCFC62;
+    color: #424242;
     @apply w-2/5;
     @apply p-2;
     @apply rounded-sm;
@@ -101,7 +107,7 @@
 
 .slug-footer-section {
     flex: 1 0 20%;
-    @apply bg-gray-400;
+    background-color: #A3A3A3;
 }
 
 .slug-post-section-content {
@@ -123,6 +129,26 @@
     }
     .slug-author-section-content-left {
         @apply w-3/5;
+    }
+}
+
+@media (max-width: 640px) {
+    .slug-header-section-content {
+        @apply flex-col;
+        @apply flex-col-reverse;
+    }
+    .slug-author-section-content {
+        @apply flex-col;
+        @apply flex-col-reverse;
+    }
+    .slug-header-section-content-left {
+        @apply w-full;
+    }
+    .slug-author-section-content-left {
+        @apply w-full;
+    }
+    .slug-author-section-content-left button {
+        @apply w-3/6;
     }
 }
 
